@@ -1,5 +1,4 @@
-import { hover } from '@testing-library/user-event/dist/hover';
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import { Image } from '../Image/Image';
 
 export const ButtonUI = () => {
@@ -17,11 +16,18 @@ export const ButtonUI = () => {
   const substracting = () =>{
     setCounter(counter -10)
   }
+
+  useEffect(()=>{
+    if(counter>=30){
+      const prueba = document.getElementById('imgGame')
+      prueba.style.filter = "grayscale(90%)"
+    }
+  })
   
 
   return (
   <div>
-      <p>{counter}</p>
+      <p id='pe'>{counter}</p>
       <button onClick={add}>+</button>
       <button onClick={reset}>Reset</button>
       <button onClick={substracting}>-</button>
