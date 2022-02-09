@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const TextAccountant = () => {
+export const TextAccountant = ({counter}) => {
   return(
        <div>
-           <h1>CounterApp</h1>
+          <h1>CounterApp</h1>
       </div>
 )
 };
