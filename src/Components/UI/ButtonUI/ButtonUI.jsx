@@ -1,4 +1,6 @@
+import { hover } from '@testing-library/user-event/dist/hover';
 import React,{ useState } from 'react';
+import { Image } from '../Image/Image';
 
 export const ButtonUI = () => {
 
@@ -15,6 +17,7 @@ export const ButtonUI = () => {
   const substracting = () =>{
     setCounter(counter -10)
   }
+  
 
   return (
   <div>
